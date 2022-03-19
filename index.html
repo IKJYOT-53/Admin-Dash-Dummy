@@ -48,12 +48,81 @@
             </div>
           </div>
           <div class="bottom-container">
-            <div class="chart">Chart</div>
-            <div class="side-chart">Side Chart</div>
+            <div class="chart">
+              <div>
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+
+            <div class="side-chart">
+                <div class="chart2">
+                    <div>
+                      <canvas id="myChart2"></canvas>
+                    </div>
+            </div>
           </div>
         </div>
         <section></section>
       </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            </div>
+            <script>
+              const labels = [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+              ];
+
+              const data = {
+                labels: labels,
+                datasets: [
+                  {
+                    label: "Next Dataset",
+                    backgroundColor: "rgb(255, 99, 132)",
+                    borderColor: "rgb(255, 99, 132)",
+                    data: [0, 10, 5, 2, 20, 30, 45],
+                  },
+                ],
+              };
+              const data2 = {
+  labels: [
+    'Red',
+    'Blue',
+    'Yellow'
+  ],
+  datasets: [{
+    label: 'My First Dataset',
+    data: [300, 50, 100],
+    backgroundColor: [
+      'rgb(255, 99, 132)',
+      'rgb(54, 162, 235)',
+      'rgb(255, 205, 86)'
+    ],
+    hoverOffset: 4
+  }]
+};
+              const config = {
+                type: "line",
+                data: data,
+                options: {},
+              };
+              const config2 = {
+                type: "doughnut",
+                data: data2,
+                options: {},
+              };
+              const myChart = new Chart(
+                document.getElementById("myChart"),
+                config
+              );
+              const myChart2 = new Chart(
+                  document.getElementById("myChart2"),
+                  config2
+              );
+            </script>
   </body>
 </html>

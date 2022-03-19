@@ -106,6 +106,9 @@ section {
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
+.chart div:nth-child(1) {
+  width: 70%;
+}
 .side-chart {
   flex: 1;
   height: 400px;
